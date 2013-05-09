@@ -1,0 +1,121 @@
+%\part{Introduction}%
+% Parts can be used to add a headline on the level above
+% "Chapter". This is typically not needed in a Master Thesis. 
+
+\chapter{Introduction}
+\section{What's in this package?}
+In this package you will find the following files:
+\vspace{1em}
+\begin{simplelist}
+    \item \textbf{BiblioInfo.tex} - Contains all bibliographic
+      information and information about the thesis. The author
+      should add this information to the commands defined in this
+      file. 
+    \item \textbf{Example.tex} - An example to show the
+      typesetting of all the used commands and environments. 
+    \item \textbf{Instruction.tex} - This file.
+    \item \textbf{Introduction.tex} - Tex file for the first
+      chapter. 
+    \item \textbf{Read.me} - Contains basic instructions for the
+      package. 
+    \item \textbf{References.bib} - An example of a reference
+      file. 
+    \item \textbf{Sunset.jpg} - The image in the example.
+    \item \textbf{Sunset.eps} - The image in the example.
+    \item \textbf{Fonts.pdf} - The image in the instruction.
+    \item \textbf{Fonts.eps} - The image in the instruction.    
+    \item \textbf{Thesis.blg, Thesis.aux, Thesis.bbl Thesis.log,
+        Thesis.lot, Thesis.out Thesis.toc} - Help files. 
+    \item \textbf{Thesis.pdf} - The PDF result Thesis.tex. 
+    \item \textbf{Thesis.ps} - The PostScript result Thesis.tex. 
+    \item \textbf{Thesis.dvi} - The DVI result Thesis.tex. 
+    \item \textbf{Thesis.sty} - All the changes to and
+      redefinitions of Book.cls have been collected in this
+      file. It also contains the basic structure of the document
+      along with all new commands and environments used in the
+      template as well as all redefined commands and
+      environments. This file defines the commands used in the
+      front matter that create the half-title page, abstractpage,
+      list of papers and dedication.    
+    \item \textbf{Thesis.tex} - This is the main \TeX{} file. In
+      this frame all other \TeX{} files are included. 
+    \item \textbf{SU-Logga.eps} - The Stockholm university black
+      and white logotype in EPS format. 
+    \item \textbf{SU-Logga} - The Stockholm university black and
+      white logotype in PDF format. 
+    \item \textbf{ProblemsAndSolutions.tex} - File containing
+      known problems and suggested solutions. 
+    \item \textbf{captions.sty} - The used version of caption
+      package. If you miss the latest version of captions use this
+      file. 
+\end{simplelist}
+
+\section{Instructions}
+The template consists of one main file, \emph{Thesis.tex}, and a
+number of \TeX{} files which are included in the mainfile. The
+thesis may be split into one or several chapter files which are to
+be included in the main matter of the Thesis.tex
+file. Introduction.tex has been included to illustrate this. All
+the normal commands and environments defined in \LaTeX{} can be
+used although some of them have been redefined for typographical
+reasons. In addition to the thesis the author should edit the
+BiblioInfo.tex file. Finally, Instruction.tex and Example.tex,
+should be excluded from Thesis.tex. 
+
+\subsection{New environments}
+A number of list environments have been added to the
+template. These are: 
+\begin{tabbing}
+\hspace{4cm}\=\\
+enumerate-indent \> Same as enumerate (numbered list) but
+indented\\ 
+itemize-indent \> Same as itemize (bulleted list) but indented\\ 
+romanlist \> Roman list (Roman numbers)\\
+romanlist-indent \> Same as romanlist but indented\\
+simplelist \> Simple list (no bullets or numbers)\\
+simplelist-indent \> Same as simplelist but indented.
+\end{tabbing}
+
+\section{Important note}
+This template may use the pdflatex package to produce the output
+as a PDF file. The package requires that all images are in JPEG,
+PNG or PDF format. EPS files can easily be converted to PDF files
+using the \emph{ps2pdf} command in the terminal. E.g. ps2pdf
+imagefile.eps imagefile.pdf. The Linux \emph{convert} command can
+be used to convert other formats to PDF files. Note that it is not
+necessary to use the \textit{pdflatex} package and that this
+version of the template also produces DVI and PostScript files.    
+
+If any of the used packages are missing or out of date in your
+\LaTeX{} installation, the latest version can be downloaded from
+http://www.ctan.org/. Packages such as geometry, caption, and many
+others are typically made 
+up of two files: a file with the extension .ins and another with
+the extension .dtx. Run \LaTeX{} on the .ins file. 
+This will extract a .sty file. Move the .sty file to a place where
+your distribution can find it. Usually this is in your
+.../localtexmf/tex/latex subdirectory (Windows or OS/2 users
+should feel free to change the direction of the slashes). Refresh
+your distributions file-name database. The command depends on the
+\LaTeX{} distribution you use: te\TeX{}, fp\TeX{} \code{texhash};
+web2c \code{maketexlsr}; Mik\TeX{} \code{initexmf -update-fndb} or
+use the GUI. 
+ 
+\subsection{Fonts}
+PDF files created from \LaTeX{} usually don't include embedded
+fonts. This is due to the fact that the default setting for the
+distributions in TeX are configured to exclude the 14 basic fonts,
+for example Times and Helvetica.
+
+\section{Outline}
+A comprehensive summary should include the following parts in the following order:
+\begin{itemize}
+    \item Title page.
+    \item Abstract page.
+    \item Table of Contents.
+    \item Introduction/Background (the first chapter; the first page to be paginated using Arabic numerals).
+    \item Chapter 1 \ldots n.
+    \item References/Bibliography.
+\end{itemize}
+\vspace{1\baselineskip}
+\noindent The front matter (the sequence of pages from the half-title page or the title page up to the table of contents) is never paginated. The sequence from Chapter 1 up to References/Bibliography is paginated using Arabic numerals. 

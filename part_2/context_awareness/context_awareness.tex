@@ -11,7 +11,7 @@ Context is a combination of any information that can be sensed or received by an
 
 In other words context is information from an entity that gives specific information to increase the understanding of an events environment. An entity can be a person, place or a object that is relevant for the interaction. A typical example of a device capable of generating this type of information is a smartphone.
 
-One such smartphone is the a Google Nexus 4 \cite{GoogleNexus} which contains, among other things, the sensors an accelerometer to detect acceleration, a GPS to receive location data, a gyroscope to detect rotation, a barometer to detect air pressure and a compass for direction and navigation. By applying sensor fusion [ref] other context data can be attained. An example of this would be combining a barometer with GPS to detect altitude[ref]. Using these types of information, we can realise applications that are context centric. Similar to the earlier example where a person was asking another person for directions to a place, the person can now ask for direction from his phone. The phone will collect context-information from the its GPS sensor and based on this location be able to give the directions.
+One such smartphone is the a Google Nexus 4 \cite{GoogleNexus} which contains, among other things, the sensors an accelerometer to detect acceleration, a GPS to receive location data, a gyroscope to detect rotation, a barometer to detect air pressure and a compass for direction and navigation. By applying sensor fusion \cite{Elmenreich02sensorfusion} other context data can be attained. An example of this would be combining a barometer with GPS to detect altitude. Using these types of information, we can realise applications that are context centric. Similar to the earlier example where a person was asking another person for directions to a place, the person can now ask for direction from his phone. The phone will collect context-information from the its GPS sensor and based on this location be able to give the directions.
 
 Context-awareness in applications will be more interesting to use when the concept Internet of things is growing. It's important for applications to take part of the context. When context is changing the applications need to handle the changes to fit the users interaction. Schmidt defines context-awareness in this way:
 
@@ -28,19 +28,19 @@ A system is context-aware if it uses context to provide relevant information and
 With these two definitions context-awareness means that we can use the context that is received by an entity and uses this information to interact with the application. An application is a context-aware application if it is able to use context in order to adjust its behavior or the content it is providing. Example of context-awareness in applications is Google Latitude[7]. The application makes it possible for your friends to see your position on a map. Google Latitude uses the locations from a entity (mobile phone or computer) to update your position on the map. Another Context-aware application from google is AdSense/AdWords. This application generates advertisement based on the context of the webpage the user have visited. 
 Also Android is a good example of context-awareness in application. When a user rotates a smartphone or a tablet the operating system changes its orientation to landscape mode.
 
-\begin{figure}[t]
+\begin{figure}[H]
 	\centering
     	\includegraphics[scale=0.75]{part_2/context_awareness/latitude_pic.jpg}
 		\caption{A picture of Google Latitude showing contacts shared positions.} 
-\end{figure}
-
-\begin{figure}[t]
-	\centering
-    	\includegraphics[scale=0.20]{part_2/context_awareness/screenshot_2013-05-01_1751.png}
-    	\includegraphics[scale=0.20]{part_2/context_awareness/screenshot_2013-05-01_1752.png}
-		\caption{Android homescreen on a Sony Ericsson Xperia PLAY rotates based on context information from its sensors when the phone is 	physically rotated.} 
 \end{figure}
 	
 Context awareness can change classical scenarios into intelligent responsive scenarios by using context informations to behave in a special way. Common applications such as home automation can use information to turn on the light at home. In earlier implementations where applications did not use context information and users turn on lamps by manually pressing a button. 
 In comparison, if the developer instead uses the context information the application can interact on information from sensors around the user. For example when a user enters his home the light will be turned on when the application detects his location from the users ubiquitous device. The developer can also use information that provides how the weather is outside, if it's sunny outside the application will act to this and it will not turn on the lights when the user enters his home, but if it's cloudy outside the application will turn on the light. 
 Context awareness on a massive scale is gradually enabled by the advances in pervasive and ubiquitous computing. 
+
+\begin{figure}[H]
+	\centering
+    	\includegraphics[scale=0.20]{part_2/context_awareness/screenshot_2013-05-01_1751.png}
+    	\includegraphics[scale=0.20]{part_2/context_awareness/screenshot_2013-05-01_1752.png}
+		\caption{Android homescreen on a Sony Ericsson Xperia PLAY rotates based on context information from its sensors when the phone is 	physically rotated.} 
+\end{figure}

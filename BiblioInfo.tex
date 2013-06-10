@@ -21,8 +21,8 @@
 \firstAuthorEmail{leon.hennings@gmail.com}              % First author's e-mail address
 \secondAuthorEmail{kasa5879@student.su.se}             % Second author's e-mail address
 
-\thesisTitle{MediaSense as a daemon}                   % The title of the thesis
-\thesisSubtitle{Daemonizing a context-aware platform for Internet of Things } % The subtitle of the thesis 
+\thesisTitle{Re-Engineering The MediaSense  Platform Towards Resource Constraint Devices}                   % The title of the thesis
+\thesisSubtitle{A RPC-based Daemon Approach} % The subtitle of the thesis 
 
 \thesisSubject{Computer and Systems Sciences}   % May be changed
                                                 % to e.g. Human-Computer 
@@ -31,20 +31,21 @@
 \thesisIsKind{Bachelor}                           % Change to Bachelor if suitable
 \theYear{2013}
 \thesisCred{15}                                 % Change to 15 if Bachelor
-\thesisAdvisor{Jaime Walters}
+\thesisAdvisor{Jamie Walters}
 \thesisAssistantAdvisor{}                       % Name of Assistant Advisor,
                                                 % if you have one
 \thesisExternalAdvisor{}                        % Name of External Advisor,
                                                 % if you have one
 
-\thesisReviewer{}
+\thesisReviewer{Iskra Popova}
 \semester{}
 \swedishTitle{}
 
                                                % The abstract text comes
                                                % here. Not more than 300
                                                % words. No empty lines.                                     
-\abstracttext{}
+\abstracttext{Computers are becoming pervasive in our society,  tablets, smartphones, computers embedded in home appliances and televisions. For users to remain capable of handling them all machine to machine communication becomes necessary so the connected devices can create an Internet of Things. The Internet of Things will make use of all collected data now stored separately in devices and allow for a new type of immersive applications by utilizing userdata from several sources. 
+The research project MediaSense is an Internet of Things middleware that allows for communication between devices and distributed sharing of sensor data. MediaSense in its current form is not designed with the trend of smaller, portable computers in mind. To mitigate this a redesign of MediaSense, using the design science methodology, was proposed to make it usable on ubiquitous devices. The proposed redesign intended to make a shared background service, a so called daemon, of the MediaSense platform so functionality of sharing and storing sensor data is shared among the applications using it. To implement this behavior a type of inter-process communication had to be chosen to allow the applications to communicate with the platform. The Java implementation of Remote Procedure Call, called Remote Method Invocation was chosen. The new version of MediaSense was designed and developed according to the requirements outlined by the lead developer of MediaSense. The redesign resulted in lower memory usage and less CPU time. This discovery will make possible the use of Internet of Things middleware and be used everyday and everywhere.}
 
 \keywords{}
 

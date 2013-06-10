@@ -9,10 +9,10 @@ The overlay in MediaSense was first implemented with a Dynamic-Hash-Table. In \c
 \subsection{Applications}
 MediaSense is written in the programming language Java. MediaSense provides an API that can be used to communicate with the platform. The communication from one platform on a device to another device running the platform is done with messages. The API provides methods for registering new context information and find nodes holding specific context information. Each node attached to the network generates information on a continual basis that is accessed and used by other nodes wishing to do so. In order to do this each node registers itself with a UCI (Universal Context Identifier). The UCI is stored in the distributed network and other nodes can resolve this and get the address where some required information is stored. When a MediaSense instance gets a message a the dissemination layer in MediaSense  handles this message and sending it to the application. The dissemination layer is acting like a router and delivers the messages to the right place. Applications have a method that is handling messages that is routed from the dissemination layer. 
 
-\begin{figure}[H]
+\begin{figure}[t]
 	\centering
-    	\includegraphics[scale=0.50]{part_2/mediasense/ms_arch.png}
-		\caption{MediaSense component architecture \cite{Kanter539187} }
+	\includegraphics[scale=0.50]{part_2/mediasense/ms_arch.png} 	
+	\caption{MediaSense component architecture \cite{Kanter539187} }
 \end{figure}
 
 \subsection{Messages}

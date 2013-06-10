@@ -11,7 +11,7 @@ After the interviews and document study of the source code of MediaSense the mai
 
 \begin{figure}[h!]
 		\centering
-    	\includegraphics[scale=0.30]{part_4/result_and_analysis/MediasenseArchOld.png}
+    	\includegraphics{part_4/result_and_analysis/mediasense_arch_old.pdf}
 		\caption{The current state of the Mediasense platform showing how every application need its own instance of MediaSense.} 
 \end{figure}
 
@@ -23,11 +23,11 @@ To make the scenario presented above possible an Internet of Things middleware i
 \subsubsection{Analysis Of Problem}
 With distributed Internet of Things middlewares every instance of the middleware is both a \emph{server} and a \emph{client}. Every instance of the middleware have its own network layer and database layer for storing context information. In a centralized middleware the server functionality can be moved to a centralized computer and therefore centralized middleware are more lightweight. This is one of the reasons distributed Internet of Things middleware are resource heavy. 
 
-To reduce the resource overhead it is prefered to change the architecture of MediaSense. Changing the architecture so that only one shared instance of MediaSense is running can reduce the resource used on a device.  As shown in figure the desired architecture of MediaSense MediaSense will be run as an underlying  \emph{daemon} and every application needing the services from the platform can use the daemon. This also solves the subproblem with multiple network layers on one device. Devices only need one open port on router or firewall to communicate with other nodes in the network. 
+To reduce the resource overhead it is prefered to change the architecture of MediaSense. Changing the architecture so that only one shared instance of MediaSense is running can reduce the resource used on a device.  As shown in figure the desired architecture of MediaSense MediaSense will be run as an underlying  \emph{daemon} and every application needing the services from the platform can use the daemon. This also solves the subproblem with multiple network layers on one device. Devices only need one open port on router or firewall to communicate with other nodes in the network.  
 
 \begin{figure}[h!]
 	\centering
-    	\includegraphics[scale=0.30]{part_4/result_and_analysis/MediasenseArchNew.png}
+    	\includegraphics{part_4/result_and_analysis/mediasense_arch_new.pdf}
     	\centering
 		\caption{The desired state of the Mediasense platform.} 
 \end{figure}

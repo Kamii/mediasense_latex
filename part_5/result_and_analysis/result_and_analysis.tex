@@ -1,18 +1,19 @@
 \subsection{Results And Analysis}
-The result shows the requirements found from the case study and interviews. Requirements are categorized in functional requirements and non-functional requirements \cite{Roman1985}. The requirements all pertain to the properties mentioned in \cite{johannesson2012design}. 
+This section shows the requirements found from the case study and interviews. Requirements are categorized in functional requirements and non-functional requirements \cite{Roman1985}. The requirements all pertain to the properties mentioned in \cite{johannesson2012design}. 
 
 \subsubsection{Functional Requirements:}
 \begin{description}
 	\item[Several applications] \hfill \\
 	One instance of the middleware should be able to handle several applications.
-	This is requirement has the property modularity for allowing any combination of applications to use the platform simultaneously.  		
+	This is requirement has the property modularity for allowing any combination of applications to use the platform simultaneously.
+		
 	
 	\item[Interface to applications] \hfill \\
 	Applications should be able to communicate with the middleware through an interface.
-	This is a requirement with the properties flexibility and maintainability allowing the middleware to be changed without destroying 			compatibility with applications.
+	This is a requirement with the properties flexibility and maintainability allowing the middleware to be changed without destroying compatibility with applications.
 	
 	\item[Platform as daemon] \hfill \\
-	When several applications are running on one device one shared instance of MediaSense should be used for the applications. This can 		reduce the resource overhead and help solving the underlying problem with a resource heavy middleware. This requirement has an 			Interoperability property, which means that the artefact has the ability to work together with other artefacts \cite{johannesson2012design}. 
+	When several applications are running on one device one shared instance of MediaSense should be used for the applications. This can reduce the resource overhead and help solving the underlying problem with a resource heavy middleware. This requirement has an Interoperability property, which means that the artefact has the ability to work together with other artefacts \cite{johannesson2012design}. 
 	
 	\item[Common network layer] \hfill \\
 	The case study showed that a lot of messages was sent from a platform to other platforms. If a common network layer could be used for all applications running on one device the network usages would decrease. With less network usage the battery of ubiquitous computers will have better battery time. This requirement has both the property of being efficient and modular. 
@@ -22,22 +23,26 @@ The result shows the requirements found from the case study and interviews. Requ
 	
 	\item[Gateway] \hfill \\
 	Run MediaSense platform on a gateway and applications on connected ubiquitous devices.
-	This requirement has the property accessibility because it allows for a greater variety of devices to use MediaSense. This requirement also has the property of efficiency because the connected ubiquitous devices will only need to run the applications.
+This requirement has the property accessibility because it allows for a greater variety of devices to use MediaSense. This requirement also has the property of efficiency because the connected ubiquitous devices will only need to run the applications.
 	
 	\item[Messages with scope] \hfill \\
-	Messages to other MediaSense nodes should have a scope, either for a specific application or to all applications on the node. This 	requirement was added to maintain the coherence property of MediaSense. With several applications running on a node messages must be able to be sent to the specific applications.
+	Messages to other MediaSense nodes should have a scope, either for a specific application or to all applications on the node. This requirement was added to maintain the coherence property of MediaSense. With several applications running on a node messages must be able to be sent to the specific applications.
+
 	
 \end{description}	
 
 \subsubsection{Non-functional requirements:}
 \begin{description}
-	\item[Java version] \hfill \\
+	\item[Less Memory Usage] \hfill \\
+	The redesign of MediaSense should use less memory so it is able to run multiple applications on ubiquitous devices. This requirement has the efficiency property.
+
+	\item[Java Version] \hfill \\
 	Because MediaSense was written using Java 1.5 the stakeholder would prefer if the redesign were done using the same version of java. This requirement makes the maintenance of the new artefact easy for the stakeholder. 
 	
-	\item[Object oriented style] \hfill \\
+	\item[Object Oriented Style] \hfill \\
 	The same object oriented style which had been used to write MediaSense should be adhered to. This requirement has the properties maintainability and elegance. When using objects as parameters for method calls only a few parameters need to be send, the objects can hold a lot of data that need to be used in the method. This is the code style the stakeholder prefers. 
 	
-	\item[Unmodified overlay] \hfill \\
+	\item[Unmodified Overlay] \hfill \\
 	The stakeholder preferred to not change the network layer of the old artefact. If possible, the network overlay module should be left unmodified. This requirement is to uphold the maintainability property.
 \end{description}	
 

@@ -5,14 +5,15 @@ Inter-process communication using files is simply done by two processes reading 
 For communication between applications there are Inter-process communication implementations supporting communication with applications running on remote computers through interfaces of a higher abstraction than those for local IPC. These can also be used locally but the abstractions come at a cost in resources.
 
 Remote IPC can be done in two ways unicast and multicast. Unicast is when the communication is sent from one entity and received by another entity. Multicast is when the communication is sent from one entity and received by a group of entities.
-An example of multicast IPC is message passing. Message passing is asynchronous and as such the message will be handled and replied to when possible. The messages contain data which is used to determine the action or response. Messages are placed in a queue upon arrival and then handled at the recipients convenience. The MediaSense platform uses message passing as a means of communication between nodes over the Internet. An example of unicast Remote IPC is Remote Procedure Calls, RPC. RPCs are unicast and synchronous.
+An example of multicast IPC is message passing. Message passing is asynchronous and as such the message will be handled and replied to when possible. The messages contain data which is used to determine the action or response. Messages are placed in a queue upon arrival and then handled at the recipients convenience. The MediaSense platform uses message passing as a means of communication between nodes over the Internet.
+An example of unicast Remote IPC is Remote Procedure Calls, RPC. RPCs are unicast and synchronous.
 
-\subsection{Message passing}
+\subsection{Message Passing}
 Message passing performs IPC by sending and receiving messages. Received messages are placed in a queue and are handled asynchronously. This allows the receiver to prioritize some messages. Message passing provides few abstractions for the developer and requires the data to be marshalled before sending messages and unmarshalled before receiving messages.
 
 The Message Passing Interface, MPI \cite{mpi3stand}, is one such standardized message passing implementation. Sending and receiving operations in MPI can be either blocking or non-blocking. Blocking send and receive operations wait for the application buffer to be free for reuse before returning to prevent race conditions, while non-blocking messages allow the process to proceed as soon as possible.
 
-\subsection{RPC}
+\subsection{Remote Procedure Calls}
 Remote Procedure Calls (RPC) are a form of IPC that allow one process to invoke a callable unit \cite{Eac} located in another logical or physical space. Usage of RPC makes it possible to both interact with programs running on the same physical memory and with applications located within the same network.
 Remote Procedure Calls are unicast and synchronous which means the sender waits for a response from the recipient before continuing the execution. Remote procedure calls are handled as if the calls were done locally, the calling process waits for a return value before proceeding. See figure \ref{rpc}.
 
@@ -21,9 +22,9 @@ Bruce Jay Nelson first defined Remote Procedure Calls as
 Remote procedure call is the synchronous language-level transfer of control between programs in disjoint address spaces whose primary communication medium is a narrow channel.  \cite{Nelson:1981:RPC:910306}
 \end{quotation}
 
-\begin{figure}[H]
-	\centering
-    	\includegraphics[scale=0.25]{part_2/remote_procedure_calls/rpc.png}
+\begin{figure}[t]
+		\centering
+    	\includegraphics{part_2/remote_procedure_calls/rpc.pdf}
 		\caption{Abstract of the events involved in remote procedure calls from a user perspective.
 The procedure P(c) in the Client calls procedure P(s) located at the Server. The procedure P(s) receive two arguments r and s and return the value t which is stored in variable var back in the client.}
 		\label{rpc} 
@@ -33,17 +34,16 @@ When using remote procedure calls, one process is considered the server and one 
 The events that occur when a client invokes a remote procedure call start with a call to the client's stub. The client stub receive the parameters from the local call and then marshalls. The marshalled data is then sent to the server by the the client's operating system. The server operating system receives the message and sends it to the skeleton. The skeleton unmarshalls the message  to obtain the parameters and invokes the local version of the procedure with the parameters. The server's procedure returns a value which is then sent to the skeleton. The skeleton then in turn marshalls the return value and sends the marshalled data back to the client. The client receive the message, the client stub unmarshalls the return value which then is sent back to the client's procedure \cite{Lewandowski97interprocesscommunication}. RPC implementations often is language specific. Some implementations, like XML-RPC and 
 JSON-RPC use a common format for describing objects and can therefore be used cross-platform.
 
-\subsection{RMI}
-RMI is a Java implementation of RPC with support for Java objects and allows entire objects to be passed and returned as parameters instead of only primitive data types. These objects can be dynamically loaded in the receiving Java Virtual Machine and can therefore be of an object type unknown to the receiver. RMI requires objects to be RemoteObjects, a remote object must implement a remote interface to support remote invocations. When a remote object is sent to another Java Virtual Machine it is sent as a remote stub to the receiving remote.
+\subsection{Remote Method Invocation}
+Remote method invocation (RMI) is a Java implementation of RPC with support for Java objects and allows entire objects to be passed and returned as parameters instead of only primitive data types. These objects can be dynamically loaded in the receiving Java Virtual Machine and can therefore be of an object type unknown to the receiver. RMI requires objects to be RemoteObjects, a remote object must implement a remote interface to support remote invocations. When a remote object is sent to another Java Virtual Machine it is sent as a remote stub to the receiving remote.
 RMI relies on a registry to find other remote objects which have to be registered with a name. Other objects can then do a lookup on the registered name to get a reference to the Remote object. RMI registries can be shared between multiple JVMs on the same machine which facilitates communication from newly created processes to persistent ones.
 
 \begin{figure}[H]
 	\centering
-    	\includegraphics[scale=0.65]{part_2/remote_procedure_calls/rmi.png}
+    	\includegraphics{part_2/remote_procedure_calls/rmi.pdf}
 		\caption{The sequence of events in a method invocation with RMI.}
 		\label{rmi} 
 \end{figure}
 
 \subsection{CORBA}
 Common Object Request Broker Architecture is an object-oriented Remote Procedure Call mechanism. Corba is implemented in many different programming languages. This enables softwares written in different languages to communicate with each other. This is done with a language neutral API. CORBA uses an Object Request Broker which provides the mechanism required for distributed objects to communicate with each other. The Object Request Broker determines the location of target object, sends a request to that object and then returns a response back to the calling object. This communication is done over TCP/IP. However, in CORBA it is not possible to bind an Object Request Broker to a specific port. If the client is behind a firewall there is no option to change the port and use another port. This makes Corba firewall unfriendly.
-

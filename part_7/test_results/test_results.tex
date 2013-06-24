@@ -27,7 +27,7 @@
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Connect several applications to the platform\\ \hline
-	Produce  				& 		 Four applications were connected to the MediaSense daemon. All applications register themselves at the platform using the Interface method registerApplication.\\ \hline
+	Produce  				& 		 Ten applications were connected to the MediaSense daemon. All applications register themselves at the platform using the Interface method registerApplication.\\ \hline
 	Expected Results  		& 		 All applications connects to the platform and connections are established without any errors.\\ \hline
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 This test shows that several applications can connect to the platform. This test also shows that the requirement \emph{Several Applications} is met.\\ \hline
@@ -117,12 +117,18 @@
 \begin{center}
     \begin{tabular}{ | l | p{9cm} | l |}
     \hline
-    Number Of Applications 								& Memory Usage 									& Total\\ \hline
-    0 													& 0 MB 											& 0 MB\\ \hline
-    1 													& 70.4 MB 										& 70.4 MB\\ \hline
-    2 													& 68.8 MB + 70.4 MB								& 139.2 MB\\ \hline
-    3 													& 68.8 MB + 71.4 MB + 73.2 MB 					& 213.04 MB\\ \hline
-    4 													& 68.8 MB + 71.4 MB + 73.2 MB + 73.1 MB		& 286.5 MB\\ \hline
+    No. Apps 								& Memory Usage 																									& Total\\ \hline
+    0 													& 0 MB 																											& 0 MB\\ \hline
+    1 													& 70.4 MB 																										& 70.4 MB\\ \hline
+    2 													& 68.8 MB + 70.4 MB																								& 139.2 MB\\ \hline
+    3 													& 68.8 MB + 71.4 MB + 73.2 MB 																					& 213.04 MB\\ \hline
+    4 													& 68.8 MB + 71.4 MB + 73.2 MB + 73.1 MB																		& 286.5 MB\\ \hline
+    5 													& 68.8 MB + 71.4 MB + 73.2 MB + 73.1 MB + 73.7 MB																& 360.2 MB\\ \hline
+    6 													& 68.8 MB + 71.4 MB + 73.2 MB + 73.1 MB + 73.7 MB + 70.1 MB													& 430.3 MB\\ \hline
+    7 													& 68.8 MB + 71.4 MB + 73.2 MB + 73.1 MB + 73.7 MB + 70.1 MB + 75.0 MB											& 505.3 MB\\ \hline
+    8 													& 68.8 MB + 71.4 MB + 73.2 MB + 73.1 MB + 73.7 MB + 70.1 MB + 75.0 MB + 68.8 MB								& 574.1 MB\\ \hline
+    9 													& 68.8 MB + 71.4 MB + 73.2 MB + 73.1 MB + 73.7 MB + 70.1 MB + 75.0 MB + 68.8 MB + 74.2 MB						& 648.3 MB\\ \hline
+    10 													& 68.8 MB + 71.4 MB + 73.2 MB + 73.1 MB + 73.7 MB + 70.1 MB + 75.0 MB + 68.8 MB + 74.2 MB + 70.0 MB			& 718.3 MB\\ \hline
     \end{tabular}
 \end{center}
 
@@ -130,12 +136,18 @@
 \begin{center}
     \begin{tabular}{ | l | p{9cm} | l |}
     \hline
-    Number Of Applications 								& Memory Usage 											& Total\\ \hline
-    0 													& 66 MB 												& 66 MB\\ \hline
-    1 													& 66.0 MB + 20.2 MB 									& 86.2 MB\\ \hline
-    2 													& 65. 4 MB + 19.5 MB + 19.5 MB  						& 104.4 MB\\ \hline
-    3 													& 65. 4 MB + 19.5 MB + 19.5 MB + 19.2 MB  				& 123.6 MB\\ \hline
-    3 													& 63. 2 MB + 19.5 MB + 19.5 MB + 19.2 MB + 20.1 MB 	& 141.5 MB\\ \hline
+    No. Apps			 								& Memory Usage 																														& Total\\ \hline
+    0 													& 66 MB 																															& 66 MB\\ \hline
+    1 													& 66.0 MB + 20.2 MB 																												& 86.2 MB\\ \hline
+    2 													& 65. 4 MB + 19.5 MB + 19.5 MB  																									& 104.4 MB\\ \hline
+    3 													& 65. 4 MB + 19.5 MB + 19.5 MB + 19.2 MB  																							& 123.6 MB\\ \hline
+    4 													& 63. 2 MB + 19.5 MB + 19.5 MB + 19.2 MB + 20.1 MB 																				& 141.5 MB\\ \hline
+    5													& 63. 2 MB + 19.5 MB + 19.5 MB + 19.2 MB + 20.1 MB + 20.2 MB																		& 161.7 MB\\ \hline
+    6													& 63. 2 MB + 19.5 MB + 19.5 MB + 19.2 MB + 20.1 MB + 20.2 MB + 21.0 MB															& 182.7 MB\\ \hline	
+    7													& 63. 2 MB + 19.5 MB + 19.5 MB + 19.2 MB + 20.1 MB + 20.2 MB + 21.0 MB + 19.7 MB													& 202.4 MB\\ \hline		
+    8													& 63. 2 MB + 19.5 MB + 19.5 MB + 19.2 MB + 20.1 MB + 20.2 MB + 21.0 MB + 19.7 MB + 21.3 MB										& 223.7 MB\\ \hline
+    9													& 63. 2 MB + 19.5 MB + 19.5 MB + 19.2 MB + 20.1 MB + 20.2 MB + 21.0 MB + 19.7 MB + 21.3 MB + 19.1 MB								& 242.6 MB\\ \hline
+    10													& 63. 2 MB + 19.5 MB + 19.5 MB + 19.2 MB + 20.1 MB + 20.2 MB + 21.0 MB + 19.7 MB + 21.3 MB + 19.1 MB + 20.3 MB					& 262.9 MB\\ \hline
     \end{tabular}
 \end{center}
 
@@ -147,11 +159,17 @@
 \begin{center}
     \begin{tabular}{ | l | p{9cm} | l |}
     \hline
-    Number Of Applications 								& Memory Usage 									& Total\\ \hline
-    1 													& 2.70 											& 2.70\\ \hline
-    2 													& 2.70 + 2.64									& 5.34\\ \hline
-    3 													& 2.84 + 2.81 + 3.07 							& 8.72\\ \hline
-    4 													& 3.32 + 2.82 + 3.10 + 3.64						& 12.88\\ \hline
+    No. Apps				 								& CPU Time	 																	& Total\\ \hline
+    1 													& 2.70 																			& 2.70\\ \hline
+    2 													& 2.70 + 2.64																	& 5.34\\ \hline
+    3 													& 2.84 + 2.81 + 3.07 															& 8.72\\ \hline
+    4 													& 3.32 + 2.82 + 3.10 + 3.64														& 12.88\\ \hline
+    5 													& 2.49 + 3.22 + 2.95 + 3.13 + 3.64												& 15.43 \\ \hline
+    6 													& 3.39 + 2.49 + 3.22 + 2.95 + 3.13 + 3.64										& 18.82\\ \hline
+    7 													& 2.76 + 3.39 + 2.49 + 3.22 + 2.95 + 3.13 + 3.64								& 21.58\\ \hline
+    8 													& 3.27 + 2.76 + 2.95 + 3.13 + 3.64 + 3.39 + 2.49 + 3.22 						& 24.85\\ \hline
+    9 													& 3.27 + 2.76 + 2.95 + 3.13 + 3.64 + 3.39 + 2.49 + 3.22 + 2.99					& 27.84\\ \hline
+    10 													& 3.41 + 3.27 + 2.76 + 2.95 + 3.13 + 3.64 + 3.39 + 2.49 + 3.22 + 2.99			& 31.25\\ \hline
     \end{tabular}
 \end{center}
 
@@ -159,11 +177,17 @@
 \begin{center}
     \begin{tabular}{ | l | p{9cm} | l |}
     \hline
-    Number Of Applications 								& Memory Usage 											& Total\\ \hline
-    1 													& 3.33 + 0.88		 									& 4.21\\ \hline
-    2 													& 3.18 + 0.70 + 0.69			  						& 4.57\\ \hline
-    3 													& 4.29 + 0.66 + 0.65 + 0.60				  				& 6.2\\ \hline
-    3 													& 4.40 + 1.02 + 0.90 + 0.91 + 0.89					 	& 8.12\\ \hline
+    No. Apps 											& CPU Time	 																	& Total\\ \hline
+    1 													& 3.33 + 0.88	 																& 4.21\\ \hline
+    2 													& 3.18 + 0.70 + 0.69	 														& 4.57\\ \hline
+    3 													& 4.29 + 0.66 + 0.65 + 0.60	 													& 6.2\\ \hline
+    4 													& 4.40 + 1.02 + 0.90 + 0.91 + 0.89	 											& 8.12\\ \hline
+    5 													& 4.51 + 0.93 + 1.07 + 1.09 + 0.82 + 0.81										& 9.23\\ \hline
+    6 													& 4.44 + 0.91 + 0.89 + 1.02 + 0.83 + 0.72 + 0.79 								& 9.60\\ \hline
+    7 													& 4.77 + 0.87 + 0.78 + 0.91 + 0.80	+ 0.70 + 0.99 + 0.85 						& 10.67\\ \hline
+    8 													& 4.76 + 1.10 + 0.88 + 0.89 + 0.84	+ 0.83 + 0.91 + 0.71 + 1.04 				& 11.96\\ \hline
+    9 													& 4.93 + 0.98 + 0.87 + 0.91 + 0.76	+ 0.81 + 0.85 + 1.02 + 0.84 + 0.91			& 12.88\\ \hline
+    10 													& 5.03 + 0.82 + 0.76 + 0.90 + 0.82	+ 0.80 + 0.88 + 0.70 + 0.64 + 1.11	+ 0.89	& 13.35\\ \hline
     \end{tabular}
 \end{center}
 
@@ -175,11 +199,17 @@
 \begin{center}
     \begin{tabular}{ | l | p{9cm} | l |}
     \hline
-    Number Of Applications 								& Memory Usage 									& Total\\ \hline
-    1 													& 30 											& 30\\ \hline
-    2 													& 30 + 30										& 60\\ \hline
-    3 													& 30 + 30 + 30 									& 90\\ \hline
-    4 													& 30 + 30 + 30 + 30								& 120\\ \hline
+    No. Apps			 								& Memory Usage 													& Total\\ \hline
+    1 													& 30 															& 30\\ \hline
+    2 													& 30 + 30														& 60\\ \hline
+    3 													& 30 + 30 + 30 													& 90\\ \hline
+    4 													& 30 + 30 + 30 + 30												& 120\\ \hline
+    5 													& 30 + 30 + 30 + 30 + 30										& 150\\ \hline
+    6 													& 30 + 30 + 30 + 30 + 30 + 30									& 180\\ \hline
+    7 													& 30 + 30 + 30 + 30 + 30 + 30 + 30								& 210\\ \hline
+    8 													& 30 + 30 + 30 + 30 + 30 + 30 + 30	+ 30						& 240\\ \hline
+    9 													& 30 + 30 + 30 + 30 + 30 + 30 + 30	+ 30 + 30					& 270\\ \hline
+    10 													& 30 + 30 + 30 + 30 + 30 + 30 + 30	+ 30+ 30 + 30				& 300\\ \hline
     \end{tabular}
 \end{center}
 
@@ -187,11 +217,17 @@
 \begin{center}
     \begin{tabular}{ | l | p{9cm} | l |}
     \hline
-    Number Of Applications 								& Memory Usage 											& Total\\ \hline
+    No. Apps			 								& Memory Usage 											& Total\\ \hline
     1 													& 36 + 19			 									& 55\\ \hline
     2 													& 37 + 19 + 19					  						& 75\\ \hline
-    3 													& 38 + 19 + 19 + 19						  				& 96\\ \hline
-    3 													& 39 + 19 + 19 + 19 + 19							 	& 115\\ \hline
+    3 													& 38 + 19 + 19 + 19						  				& 95\\ \hline
+    4 													& 39 + 19 + 19 + 19 + 19							 	& 115\\ \hline
+    5													& 40 + 19 + 19 + 19 + 19 + 19							& 135 \\ \hline
+    6													& 41 + 19 + 19 + 19 + 19 + 19 + 19						& 155 \\ \hline
+    7													& 42 + 19 + 19 + 19 + 19 + 19 + 19 + 19				& 175 \\ \hline
+    8													& 43 + 19 + 19 + 19 + 19 + 19 + 19 + 19 + 19			& 195 \\ \hline
+    9													& 44 + 19 + 19 + 19 + 19 + 19 + 19 + 19 + 19 + 19		& 215 \\ \hline
+    10													& 45 + 19 + 19 + 19 + 19 + 19 + 19 + 19 + 19 + 19 + 19	& 235 \\ \hline
     \end{tabular}
 \end{center}
 

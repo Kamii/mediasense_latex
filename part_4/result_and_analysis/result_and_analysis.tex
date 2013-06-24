@@ -1,10 +1,10 @@
-\subsection{Results And Analysis}
+\section{Results And Analysis}
 The following scenario describes a use case scenario of an Internet of Things platform.
 
-\subsubsection{Scenario}
+\subsection{Scenario}
 Johan is CEO for a company in Stockholm. He is always on the move from meetings with his co-workers at work and to his daughter's football practice after work. His apartment is equipped with broadband and he has a Raspberry Pi computer connected to the Internet through a router. This Raspberry Pi is working as an information hub for Johan. The computer is running a distributed Internet of Things middleware and has 20 application installed. Johan has bought a new temperature regulator for his apartment. This regulator comes with an application that can be installed on his information hub. The temperature regulator is context-aware, it gets GPS information from Johans mobile phone and regulates the temperature in his apartment according to this. When he leaves home every morning the heating in the apartment turns down. At work Johan receive notifications to leave for meetings based on where the meetings are and how long it will take him to get there. When Johan leaves work his car's navigation system checks with his calendar if he has anything on his schedule, discovers his daughter has football practice and plots a course to the practice to pick her up. Johan's mobile phone alerts his heating regulator as he approaches his home and the heating is turned back on. Another application is connected to a thermometer by Johan's house and collects information about the temperature outdoors and adjusts the heating of according to this information.
 
-\subsubsection{Define problem}
+\subsection{Define problem}
 Distributed Internet of Things middlewares are resource heavy, which makes them inefficient to run on ubiquitous devices. Centralized Internet of Things middleware can solve this problem, but centralized approaches are more vulnerable and it can not be guaranteed that the server is always up and ready to respond to clients requests. Therefore, a distributed Internet of Things middleware needs to be redesigned to reduce the resource footprint. The chosen middleware for redesign is MediaSense. MediaSense is being developed by researchers at the Department of Computer and System Sciences at Stockholm University and is open source. 
 
 After the interviews and document study of the source code of MediaSense the main reason for the resource overhead was identified. MediaSense in its present form makes it necessary to run the platform once for every application. Every application running on a device needs its own instance of the middleware. This makes it necessary to run a middleware for every application running on a device, which is the main reason of the resource overhead. 
@@ -17,10 +17,10 @@ After the interviews and document study of the source code of MediaSense the mai
 
 A sub-problem to the multiple middleware instances is that every instance need its own port for communicating. Because MediaSense is communicating over IP every instance needs its own port open. This means that a user needs to open new ports on the router and firewall for every application running on the device. When several instances of MediaSense is running on a device the network traffic increases, more processing power is used and more memory is used. 
 
-\subsubsection{Motivation}
+\subsection{Motivation}
 To make the scenario presented above possible an Internet of Things middleware it is needed to facilitate the communication between devices. Because the devices used in the scenario are mobile this middleware needs to be resource efficient. The devices need to handle a multitude of applications. Given the current state of MediaSense, the scenario will not be possible because of the resource overhead. To make the Internet of Things concept possible on ubiquitous devices this resource overhead must be dealt with.
 
-\subsubsection{Analysis Of Problem}
+\subsection{Analysis Of Problem}
 With distributed Internet of Things middlewares every instance of the middleware is both a \emph{server} and a \emph{client}. Every instance of the middleware have its own network layer and database layer for storing context information. In a centralized middleware the server functionality can be moved to a centralized computer and therefore centralized middleware are more lightweight. This is one of the reasons distributed Internet of Things middleware are resource heavy. 
 
 To reduce the resource overhead it is prefered to change the architecture of MediaSense. Changing the architecture so that only one shared instance of MediaSense is running can reduce the resource used on a device.  As shown in figure the desired architecture of MediaSense MediaSense will be run as an underlying  \emph{daemon} and every application needing the services from the platform can use the daemon. This also solves the subproblem with multiple network layers on one device. Devices only need one open port on router or firewall to communicate with other nodes in the network.  

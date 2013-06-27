@@ -1,6 +1,7 @@
 \section{Test Results}
 \subsection{Functionality}
 
+\subsubsection{Start The Platform}
 \begin{center}
     \begin{tabular}{ | l | p{12cm} |}
     \hline
@@ -12,6 +13,7 @@
     \end{tabular}
 \end{center}
 
+\subsubsection{Connect An Application}
 \begin{center}
     \begin{tabular}{ | l | p{12cm} |}
     \hline
@@ -23,6 +25,7 @@
     \end{tabular}
 \end{center}
 
+\subsubsection{Connect Several Applications}
 \begin{center}
     \begin{tabular}{ | l | p{12cm} |}
     \hline
@@ -34,6 +37,7 @@
     \end{tabular}
 \end{center}
 
+\subsubsection{Storing An UCI}
 \begin{center}
     \begin{tabular}{ | l | p{12cm} |}
     \hline
@@ -45,6 +49,7 @@
     \end{tabular}
 \end{center}
 
+\subsubsection{Resolving An UCI}
 \begin{center}
     \begin{tabular}{ | l | p{12cm} |}
     \hline
@@ -56,6 +61,7 @@
     \end{tabular}
 \end{center}
 
+\subsubsection{Sending Message}
 \begin{center}
     \begin{tabular}{ | l | p{12cm} |}
     \hline
@@ -67,6 +73,7 @@
     \end{tabular}
 \end{center}
 
+\subsubsection{Application Crash}
 \begin{center}
     \begin{tabular}{ | l | p{12cm} |}
     \hline
@@ -78,6 +85,7 @@
     \end{tabular}
 \end{center}
 
+\subsubsection{Send Peer Message}
 \begin{center}
     \begin{tabular}{ | l | p{12cm} |}
     \hline
@@ -89,6 +97,7 @@
     \end{tabular}
 \end{center}
 
+\subsubsection{Send Application Message}
 \begin{center}
     \begin{tabular}{ | l | p{12cm} |}
     \hline
@@ -100,6 +109,7 @@
     \end{tabular}
 \end{center}
 
+\subsubsection{Connect Application To An External Platform}
 \begin{center}
     \begin{tabular}{ | l | p{12cm} |}
     \hline
@@ -115,45 +125,25 @@
 
 \subsection{Resource Usage Measurement}
 
-\subsubsection{Memory Usage Old MediaSense Version}
+\subsubsection{Memory Usage Of MediaSense}
 \begin{center}
-    \begin{tabular}[t!]{ | l | p{9cm} | l |}
+    \begin{tabular}[t!]{ | l | l | l |}
     \hline
-    Number Of Applications								& Memory Usage\\ \hline
-    0 													& 0 MB\\ \hline
-    1 													& 70.4 MB\\ \hline
-    2 													& 139.2 MB\\ \hline
-    3 													& 213.04 MB\\ \hline
-    4 													& 286.5 MB\\ \hline
-    5 													& 360.2 MB\\ \hline
-    6 													& 430.3 MB\\ \hline
-    7 													& 505.3 MB\\ \hline
-    8 													& 574.1 MB\\ \hline
-    9 													& 648.3 MB\\ \hline
-    10 													& 718.3 MB\\ \hline
-    \end{tabular}
-\end{center}
-
-\subsubsection{Memory Usage New MediaSense Version}
-\begin{center}
-    \begin{tabular}[t!]{ | l | p{9cm} | l |}
-    \hline
-    Number Of Applications								& Memory Usage\\ \hline
-    0 													& 66 MB\\ \hline
-    1 													& 86.2 MB\\ \hline
-    2 													& 104.4 MB\\ \hline
-    3 													& 123.6 MB\\ \hline
-    4 													& 141.5 MB\\ \hline
-    5													& 161.7 MB\\ \hline
-    6													& 182.7 MB\\ \hline	
-    7													& 202.4 MB\\ \hline		
-    8													& 223.7 MB\\ \hline
-    9													& 242.6 MB\\ \hline
-    10													& 262.9 MB\\ \hline
+    Number Of Applications								& Memory Usage Old Version				& Memory Usage New Version\\ \hline
+    0 													& 0 MB									& 66 MB\\ \hline
+    1 													& 70.4 MB								& 86.2 MB\\ \hline
+    2 													& 139.2 MB								& 104.4 MB\\ \hline
+    3 													& 213.04 MB								& 123.6 MB\\ \hline
+    4 													& 286.5 MB								& 141.5 MB\\ \hline
+    5 													& 360.2 MB								& 161.7 MB\\ \hline
+    6 													& 430.3 MB								& 182.7 MB\\ \hline
+    7 													& 505.3 MB								& 202.4 MB\\ \hline
+    8 													& 574.1 MB								& 223.7 MB\\ \hline
+    9 													& 648.3 MB								& 242.6 MB\\ \hline
+    10 													& 718.3 MB								& 262.9 MB\\ \hline
     \end{tabular}
 \end{center}
 \clearpage
-
 \begin{figure}[H]
 		\centering
     	\includegraphics[scale=0.50]{part_7/test_results/memory.pdf}
@@ -163,39 +153,21 @@
 
 % ------------------------------
 
-\subsubsection{CPU Time Old MediaSense Version}
+\subsubsection{CPU Time Of MediaSense}
 \begin{center}
-    \begin{tabular}[t!]{ | l | p{9cm} | l |}
+    \begin{tabular}[t!]{ | l | l | l |}
     \hline
-    Number Of Applications								& CPU Time\\ \hline
-    1 													& 2.70\\ \hline
-    2 													& 5.34\\ \hline
-    3 													& 8.72\\ \hline
-    4 													& 12.88\\ \hline
-    5 													& 15.43\\ \hline
-    6 													& 18.82\\ \hline
-    7 													& 21.58\\ \hline
-    8 													& 24.85\\ \hline
-    9 													& 27.84\\ \hline
-    10 													& 31.25\\ \hline
-    \end{tabular}
-\end{center}
-
-\subsubsection{CPU Time New MediaSense Version}
-\begin{center}
-    \begin{tabular}[t!]{ | l | p{9cm} | l |}
-    \hline
-    Number Of Applications								& CPU Time\\ \hline
-    1 													& 4.21\\ \hline
-    2 													& 4.57\\ \hline
-    3 													& 6.2\\ \hline
-    4 													& 8.12\\ \hline
-    5 													& 9.23\\ \hline
-    6 													& 9.60\\ \hline
-    7 													& 10.67\\ \hline
-    8 													& 11.96\\ \hline
-    9 													& 12.88\\ \hline
-    10 													& 13.35\\ \hline
+    Number Of Applications								& CPU Time Old Version					& CPU Time New Version\\ \hline
+    1 													& 2.70									& 4.21\\ \hline
+    2 													& 5.34									& 4.57\\ \hline
+    3 													& 8.72									& 6.2\\ \hline
+    4 													& 12.88									& 8.12\\ \hline
+    5 													& 15.43									& 9.23\\ \hline
+    6 													& 18.82									& 9.60\\ \hline
+    7 													& 21.58									& 10.67\\ \hline
+    8 													& 24.85									& 11.96\\ \hline
+    9 													& 27.84									& 12.88	\\ \hline
+    10 													& 31.25									& 13.35\\ \hline
     \end{tabular}
 \end{center}
 \clearpage
@@ -207,42 +179,23 @@
 \end{figure}
 
 
-
 % ------------------------------
 
-\subsubsection{Threads Old MediaSense Version}
+\subsubsection{Threads Usage Of MediaSense Version}
 \begin{center}
-    \begin{tabular}[t!]{ | l | p{9cm} | l |}
+    \begin{tabular}[t!]{ | l | l | l |}
     \hline
-    Number Of Applications								& Threads\\ \hline
-    1 													& 30\\ \hline
-    2 													& 60\\ \hline
-    3 													& 90\\ \hline
-    4 													& 120\\ \hline
-    5 													& 150\\ \hline
-    6 													& 180\\ \hline
-    7 													& 210\\ \hline
-    8 													& 240\\ \hline
-    9 													& 270\\ \hline
-    10 													& 300\\ \hline
-    \end{tabular}
-\end{center}
-
-\subsubsection{Threads New MediaSense Version}
-\begin{center}
-    \begin{tabular}[t!]{ | l | p{9cm} | l |}
-    \hline
-    Number Of Applications								& Threads\\ \hline
-    1 													& 55\\ \hline
-    2 													& 75\\ \hline
-    3 													& 95\\ \hline
-    4 													& 115\\ \hline
-    5													& 135 \\ \hline
-    6													& 155 \\ \hline
-    7													& 175 \\ \hline
-    8													& 195 \\ \hline
-    9													& 215 \\ \hline
-    10													& 235 \\ \hline
+    Number Of Applications								& Threads Old Version			& Threads New Version\\ \hline
+    1 													& 30							& 55\\ \hline
+    2 													& 60							& 75\\ \hline
+    3 													& 90							& 95\\ \hline
+    4 													& 120							& 115\\ \hline
+    5 													& 150							& 135\\ \hline
+    6 													& 180							& 155\\ \hline
+    7 													& 210							& 175\\ \hline
+    8 													& 240							& 195\\ \hline
+    9 													& 270							& 215\\ \hline
+    10 													& 300							& 235\\ \hline
     \end{tabular}
 \end{center}
 \clearpage
@@ -253,9 +206,8 @@
     	\includegraphics[scale=0.50]{part_7/test_results/avg_threads.pdf}
 \end{figure}
 
-
 % ------------------------------
-
+\clearpage
 
 
 

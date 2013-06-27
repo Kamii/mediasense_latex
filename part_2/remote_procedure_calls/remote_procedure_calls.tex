@@ -22,18 +22,19 @@ Bruce Jay Nelson first defined Remote Procedure Calls as
 [...] the synchronous language-level transfer of control between programs in disjoint address spaces whose primary communication medium is a narrow channel.  \cite{Nelson:1981:RPC:910306}
 \end{quotation}
 
-\begin{figure}[t]
-		\centering	\includegraphics{part_2/remote_procedure_calls/rpc.pdf}
+\begin{figure}[ht]
+		\centering	
+		\includegraphics{part_2/remote_procedure_calls/rpc.pdf}
 		\caption{Abstract of the events involved in remote procedure calls from a user perspective.
-The procedure P(c) in the Client calls procedure P(s) located at the Server. The procedure P(s) receive two arguments r and s and return the value t which is stored in variable var back in the client.}
-		\label{rpc} 
+The procedure P(c) in the Client calls procedure P(s) located at the Server. The procedure P(s) receive two arguments r and s and return the value t which is stored in variable var back in the client.}}
+		\label{rpc}
 \end{figure}
 
 When using remote procedure calls, one process is considered the server and one the client. The client is the caller process and the server receive and handle the process and then returns the value. The client and server both have stubs, server-side stubs are called skeletons. Stubs are modules in charge of marshalling the calls, which means packing the parameters of the call in a way that allows them to be stored or transferred via TCP or UDP \cite{rfc5531}. 
 The events that occur when a client invokes a remote procedure call start with a call to the client's stub are shown in \ref{rpcflow}. The client stub receive the parameters from the local call and then marshalls. The marshalled data is then sent to the server by the the client's operating system. The server operating system receives the message and sends it to the skeleton. The skeleton unmarshalls the message  to obtain the parameters and invokes the local version of the procedure with the parameters. The server's procedure returns a value which is then sent to the skeleton. The skeleton then in turn marshalls the return value and sends the marshalled data back to the client. The client receives the message, the client stub unmarshalls the return value which then is sent back to the client's procedure \cite{Lewandowski97interprocesscommunication}. RPC implementations often is language specific. Some implementations, like XML-RPC and 
 JSON-RPC use a common format for describing objects and can therefore be used cross-platform.
 
-\begin{figure}[H]
+\begin{figure}[ht]
 		\centering	\includegraphics{part_2/remote_procedure_calls/Rpcflow300.png}
 		\caption{The flow of a RPC}
 		\label{rpcflow} 
@@ -43,7 +44,7 @@ JSON-RPC use a common format for describing objects and can therefore be used cr
 Remote method invocation (RMI) is a Java implementation of RPC with support for Java objects and allows entire objects to be passed and returned as parameters instead of only primitive data types. These objects can be dynamically loaded in the receiving Java Virtual Machine and can therefore be of an object type unknown to the receiver. RMI requires objects to be RemoteObjects, a remote object must implement a remote interface to support remote invocations. When a remote object is sent to another Java Virtual Machine it is sent as a remote stub to the receiving remote.
 RMI relies on a registry to find other remote objects which have to be registered with a name. Other objects can then do a lookup on the registered name to get a reference to the Remote object. RMI registries can be shared between multiple JVMs on the same machine which facilitates communication from newly created processes to persistent ones.
 
-\begin{figure}[H]
+\begin{figure}[ht]
 	\centering
     	\includegraphics{part_2/remote_procedure_calls/rmi.pdf}
 		\caption{The sequence of events in a method invocation with RMI.}

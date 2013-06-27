@@ -1,8 +1,7 @@
 \section{Test Results}
 \subsection{Functionality}
 
-\subsubsection{Start The Platform}
-\begin{center}
+\begin{table}[!h]
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Start the platform\\ \hline
@@ -11,10 +10,10 @@
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 This test shows that the requirement Platform as Daemon is met.\\ \hline
     \end{tabular}
-\end{center}
+    \caption{Start The Platform}
+\end{table}
 
-\subsubsection{Connect An Application}
-\begin{center}
+\begin{table}[!h]
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Connect an application to the platform \\ \hline
@@ -23,10 +22,10 @@
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 This shows that the old functionality still exists and work in the new artefact.\\ \hline
     \end{tabular}
-\end{center}
+    \caption{Connect An Application}
+\end{table}
 
-\subsubsection{Connect Several Applications}
-\begin{center}
+\begin{table}[!h]
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Connect several applications to the platform\\ \hline
@@ -35,10 +34,10 @@
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 This test shows that several applications can connect to the platform. This test also shows that the requirement \emph{Several Applications} is met.\\ \hline
     \end{tabular}
-\end{center}
+    \caption{Connect Several Application}
+\end{table}
 
-\subsubsection{Storing An UCI}
-\begin{center}
+\begin{table}[!h]
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Storing an UCI\\ \hline
@@ -47,10 +46,10 @@
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 This test shows that the functionality still works. The methods which are called are from the provided Interface. This shows that requirement \emph{Interface to applications} is met.\\ \hline
     \end{tabular}
-\end{center}
+    \caption{Storing An UCI}
+\end{table}
 
-\subsubsection{Resolving An UCI}
-\begin{center}
+\begin{table}[!h]
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Resolving an UCI\\ \hline
@@ -59,10 +58,10 @@
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 The methods that are called are the methods from the provided Interface. This shows that requirement \emph{Interface to applications} is met.\\ \hline
     \end{tabular}
-\end{center}
+    \caption{Resolving An UCI}
+\end{table}
 
-\subsubsection{Sending Message}
-\begin{center}
+\begin{table}[!h]
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Sending a message\\ \hline
@@ -71,10 +70,10 @@
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 The methods that are called are the methods from the provided Interface. This shows that the requirement \emph{Interface to applications} is met. \\ \hline
     \end{tabular}
-\end{center}
+    \caption{Sending Message}
+\end{table}
 
-\subsubsection{Application Crash}
-\begin{center}
+\begin{table}[!h]
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Application crash with several application connected to platform\\ \hline
@@ -83,10 +82,10 @@
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 This shows that the requirement \emph{Application independent} is met.\\ \hline
     \end{tabular}
-\end{center}
+    \caption{Application Crash}
+\end{table}
 
-\subsubsection{Send Peer Message}
-\begin{center}
+\begin{table}[!h]
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Send peer scope message\\ \hline
@@ -95,10 +94,10 @@
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 Requirement \emph{Message with scope} is met.\\ \hline
     \end{tabular}
-\end{center}
+    \caption{Send Peer Message}
+\end{table}
 
-\subsubsection{Send Application Message}
-\begin{center}
+\begin{table}[!h]
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Send application scope message\\ \hline
@@ -107,10 +106,10 @@
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 Requirement \emph{Message with scope} is met.\\ \hline
     \end{tabular}
-\end{center}
+    \caption{Send Application Message}
+\end{table}
 
-\subsubsection{Connect Application To An External Platform}
-\begin{center}
+\begin{table}[!h]
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Connect an application to an external MediaSense platform\\ \hline
@@ -119,13 +118,15 @@
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 Requirement gateway is met. \\ \hline
     \end{tabular}
-\end{center}
+    \caption{Connect Application To An External Platform}
+\end{table}
 \clearpage
 
 
 \subsection{Resource Usage Measurement}
 
 \subsubsection{Memory Usage Of MediaSense}
+\begin{table}[H]
 \begin{center}
     \begin{tabular}[t!]{ | l | l | l |}
     \hline
@@ -142,18 +143,25 @@
     9 													& 648.3 MB								& 242.6 MB\\ \hline
     10 													& 718.3 MB								& 262.9 MB\\ \hline
     \end{tabular}
+    \caption{Showing how much memory MediaSense is using}
 \end{center}
+\end{table}
+
+
 \clearpage
 \begin{figure}[H]
 		\centering
     	\includegraphics[scale=0.50]{part_7/test_results/memory.pdf}
+    	\caption{Showing how much memory MediaSense is using}
     	\includegraphics[scale=0.50]{part_7/test_results/avg_memory.pdf}
+    	\caption{Average memory used by MediaSense per application}
 \end{figure}
 
 
 % ------------------------------
 
 \subsubsection{CPU Time Of MediaSense}
+\begin{table}[H]
 \begin{center}
     \begin{tabular}[t!]{ | l | l | l |}
     \hline
@@ -169,19 +177,24 @@
     9 													& 27.84									& 12.88	\\ \hline
     10 													& 31.25									& 13.35\\ \hline
     \end{tabular}
+    \caption{Showing how much CPU time MediaSense is using}
 \end{center}
+\end{table}
 \clearpage
 
 \begin{figure}[H]
 		\centering
     	\includegraphics[scale=0.50]{part_7/test_results/cputime.pdf}
+    	\caption{Showing how much CPU time MediaSense is using}
     	\includegraphics[scale=0.50]{part_7/test_results/avg_cputime.pdf}
+    	\caption{Average CPU time per application used when MediaSense is running}
 \end{figure}
 
 
 % ------------------------------
 
 \subsubsection{Threads Usage Of MediaSense Version}
+\begin{table}[H]
 \begin{center}
     \begin{tabular}[t!]{ | l | l | l |}
     \hline
@@ -197,13 +210,17 @@
     9 													& 270							& 215\\ \hline
     10 													& 300							& 235\\ \hline
     \end{tabular}
+    \caption{Showing how many threads MediaSense is using}
 \end{center}
+\end{table}
 \clearpage
 
 \begin{figure}[H]
 		\centering
     	\includegraphics[scale=0.50]{part_7/test_results/threads.pdf}
+    	\caption{Showing how many threads MediaSense is using}
     	\includegraphics[scale=0.50]{part_7/test_results/avg_threads.pdf}
+    	\caption{Average number of threads per application used when MediaSense is running}
 \end{figure}
 
 % ------------------------------

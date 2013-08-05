@@ -1,4 +1,11 @@
-\section{Artefact Description}
+\section{System Architecture}
+
+\begin{figure}[h!]
+	\centering
+    	\includegraphics{part_6/artefact_description/changes.pdf}
+		\caption{Figure showing how MediaSense Platfrom Proxy and application communicate with each other and where the RMI client and server is located in the architecture.} 
+		\label{ds}
+\end{figure}
 
 \subsection{Network Overlay}
 The network overlay handles the communication with other nodes and stores peer data in a database. The overlay has remained the same as in the old version of MediaSense and thus satisfies the requirement that the overlay should remain unmodified.
@@ -17,14 +24,6 @@ The MediaSense Platform Interface Layer initiates the core components of the Med
 
 \subsection{MediaSense Platform RMI Proxy}
 This component is a RMI server that register itself to the RMI registry and makes it possible for RMI client to connect to it. The RMI proxy provides methods so the applications can communicate with the RMI server which is calling methods in the provided MediaSense Platform Interface Layer. The RMI server is acting as a shaded API so applications can call methods that is provided by MediaSense. This component makes it possible for several applications to connect to it and therefore only one MediaSense instance is needed for communication with the platform. This allows MediaSense to be run as a background process and thus satisfies the requirement that MediaSense should be able to run as a daemon.
-
-\begin{figure}[h!]
-	\centering
-    	\includegraphics{part_6/artefact_description/changes.pdf}
-		\caption{Figure showing how MediaSense Platfrom Proxy and application communicate with each other and where the RMI client and server is located in the architecture.} 
-		\label{ds}
-\end{figure}
-
 
 \subsection{MediaSense Application Interface}
 The application interface is used when a developer is developing an application. The developer extends this interface to get access to functionality that is needed for applications running on MediaSense. 

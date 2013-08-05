@@ -1,6 +1,6 @@
-\chapter{Discussion}
+\chapter{Conclusion and Discussion}
 
-\section{Conclusion}
+%\section{Conclusion}
 This thesis has shown that the resource consumption of a middleware for Internet of Things can be reduced by running it as a daemon. The overhead caused by using RMI for the inter-process communication causes it to use slightly more memory and processor time when only running one application, this small overhead is vastly compensated for when running more than one application. 
 
 Running MediaSense as a daemon makes the resource costs for the platform and network overlay a one-time cost which makes it possible to run a lot more applications compared to the old version. As an example of a ubiquitous device the Raspberry Pi \cite{rpiweb} was mentioned. The Raspberry Pi model B has 512 MB of memory which is shared with GPU. The default split of the memory is 64 MB for the GPU leaving 448 MB as RAM. The most popular operating system for the Raspberry Pi is a modified version of the Linux distribution Debian called Raspbian, which can be configured to use less than 10 MB memory. A moderate estimate of the operating systems memory requirements in normal use would be around 30 MB, allowing for a little overhead that leaves 400 MB of memory. The results showed that the old version of MediaSense required on average 70 MB of memory which would allow 5 MediaSense applications to be run on a Raspberry Pi.
@@ -8,14 +8,14 @@ Running MediaSense as a daemon makes the resource costs for the platform and net
 The redesigned version of MediaSense required 60 MB memory for the daemon and then 20 MB per application. This allows for 17 applications running on the same Raspberry Pi.
 A reengineered distributed Internet of Things middleware running as a background process uses less resources when several applications are running on a device. This is one step closer to fulfil the Internet of Things concept where ubiquitous computers are pervasive in in the physical environment.
 
-\section{Significance And Originality}
+%\section{Significance And Originality}
 Usage of architectural middleware like RMI is common practice in all fields of computer science. The usage of RMI in MediaSense was done with consideration to resource consumption and shared resources to support ubiquitous devices which haven't been done before. In \cite{ubiqrpc} published in 2001 it is concluded that RPC is harmful to ubiquitous computing. MediaSense uses the kind of asynchronous communication proposed in \cite{ubiqrpc} between nodes but ubiquitous computers have evolved a lot in the last 12 years. In the case explored in this thesis it has shown that the RPC implementation RMI can be used with great success in ubiquitous computing.
 
-\section{Societal and Ethical Implications}
+%\section{Societal and Ethical Implications}
 This research has shown that a distributed approach to the Internet of Things middleware is viable on ubiquitous devices. As this makes immersive applications using context data feasible on mobile devices this could mean a big change in computer user behavior.
 Because MediaSense uses a distributed approach to store and share context data, the users data will be stored on computers other than their own. As it is today, MediaSense does not encrypt this data. Since the data is distributed this means there won't be a single vector of attack and specific users data cannot be as easily obtained. 
 
-\section{Future Studies}
+%\section{Future Studies}
 In the future MediaSense could be ported to mobile operating systems such as Android and iOS. This could be done by using PhoneGap \cite{phonegap}, a cross-platform framework for mobile apps with standards-based Web technologies like HTML, JavaScript, CSS. 
 
 To continue reducing the resource overhead in MediaSense, future studies can investigate how much resources the overlay uses and if it can be optimized to reduce the resource consumption. 

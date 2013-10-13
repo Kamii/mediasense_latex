@@ -14,13 +14,13 @@ The following sections show the requirements gathered in the case study. Require
 	This is a requirement with the properties flexibility and maintainability allowing the middleware to be changed without destroying compatibility with applications.
 	
 	\item[Platform as daemon] \hfill \\
-	When several applications are running on one device one shared instance of MediaSense should be used for the applications. This can reduce the resource overhead and help solving the underlying problem with a resource heavy middleware. This requirement has an Interoperability property, which means that the artefact has the ability to work together with other artefacts \cite{johannesson2012design}. 
+	When several applications run simultaneously on one device, one shared instance of MediaSense should be used by the applications. This can reduce the resource overhead and help solve the underlying problem with a resource heavy middleware. This requirement has an Interoperability property, which means that the artefact has the ability to work together with other artefacts \cite{johannesson2012design}. 
 	
 	\item[Common network layer] \hfill \\
-	The case study showed that a lot of messages was sent from a platform to other platforms. If a common network layer could be used for all applications running on one device the network usages would decrease. With less network usage the battery of ubiquitous computers will have better battery time. This requirement has both the property of being efficient and modular. 
+	The case study showed that a lot of messages was sent from a platform to other platforms. If a common network layer could be used for all applications running on one device, the network usages would decrease. With less network usage, the battery of ubiquitous computers will have better battery time. This requirement has both the property of being efficient and modular. 
 	
 	\item[Application independent] \hfill \\
-	Applications should be able to start and stop independently of the platform. A crashed application should not affect the execution of the middleware itself. This requirement has the property robustness which means that it have the ability to cope with failures, errors and other problems during execution.
+	Applications should be able to start and stop independently of the platform. A crashed application should not affect the execution of the middleware itself. This requirement has the property robustness, which means that it has the ability to cope with failures, errors and other problems during execution.
 	
 	\item[Gateway] \hfill \\
 	Run MediaSense platform on a gateway and applications on connected ubiquitous devices.
@@ -35,16 +35,16 @@ This requirement has the property accessibility because it allows for a greater 
 \subsection{Non-functional requirements:}
 \begin{description}
 	\item[Less Memory Usage] \hfill \\
-	The redesign of MediaSense should use less memory so it is able to run multiple applications on ubiquitous devices. This requirement has the efficiency property.
+	The redesign of MediaSense should use less memory, so it is able to run multiple applications on ubiquitous devices. This requirement has the efficiency property.
 
 	\item[Java Version] \hfill \\
-	Because MediaSense was written using Java 1.5 the stakeholder would prefer if the redesign were done using the same version of java. This requirement makes the maintenance of the new artefact easy for the stakeholder. 
+	Because MediaSense was written using Java 1.5, the stakeholder prefers if the redesign is done using the same version of java. This requirement makes the maintenance of the new artefact easy for the stakeholder. 
 	
 	\item[Object Oriented Style] \hfill \\
-	The same object oriented style which had been used to write MediaSense should be adhered to. This requirement has the properties maintainability and elegance. When using objects as parameters for method calls only a few parameters need to be send, the objects can hold a lot of data that need to be used in the method. This is the code style the stakeholder prefers. 
+	The code should adhere to the same object oriented style which have previously been used to write MediaSense. This requirement has the properties maintainability and elegance. When using objects as parameters for method calls only a few parameters need to be send, the objects can hold a lot of data that need to be used in the method. This is the code style preferred by the stakeholder. 
 	
 	\item[Unmodified Overlay] \hfill \\
-	The stakeholder preferred to not change the network layer of the old artefact. If possible, the network overlay module should be left unmodified. This requirement is to uphold the maintainability property.
+	The stakeholder preferred not to change the network layer of the old artefact. If possible, the network overlay module should be left unmodified. This requirement is to uphold the maintainability property.
 \end{description}	
 
 

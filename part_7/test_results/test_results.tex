@@ -17,8 +17,8 @@
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Connect an application to the platform \\ \hline
-	Produce  				& 		 This was done by starting a MediaSense application and connecting it to the background process from the previous test. The application registers itself with the platform and a connection to the platform is established. To see that the platform and the application are connected to each other the method getLocalhost() was called and the application printed this out in the output console. \\ \hline
-	Expected Results  		& 		 The application connects to the platform and when the application registers itself to the platform they are connected. When getLocalhost() is called the localhost for the platform should be printed in console. \\ \hline
+	Produce  				& 		 This was done by starting a MediaSense application and connecting it to the background process from the previous test. The application registers itself with the platform and a connection to the platform is established. To see that the platform and the application are connected to each other the method getLocalhost() was called  and the application printed this out in the output console. \\ \hline
+	Expected Results  		& 		 The application connects to the platform and when the application registers itself to the platform they are connected. When getLocalhost() is called, the localhost for the platform should be printed in the console. \\ \hline
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 This shows that the old functionality still exists and works in the new artefact.\\ \hline
     \end{tabular}
@@ -30,7 +30,7 @@
     \hline
     Test 	 				& 		 Connect several applications to the platform\\ \hline
 	Produce  				& 		 Ten applications were connected to the MediaSense daemon. All applications register themselves at the platform using the Interface method registerApplication.\\ \hline
-	Expected Results  		& 		 All applications connects to the platform and connections are established without any errors.\\ \hline
+	Expected Results  		& 		 All applications connect to the platform and connections are established without any errors.\\ \hline
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 This test shows that several applications can connect to the platform. This test also shows that the requirement \emph{Several Applications} is met.\\ \hline
     \end{tabular}
@@ -44,7 +44,7 @@
 	Produce  				& 		 One of the applications connected to the platform store a UCI by calling the method registerUCI.\\ \hline
 	Expected Results  		& 		 A DuplicateUCICheckMessage is sent from the platform and a DuplicateUCICheckResponseMessage will be received when the UCI is stored in the network.\\ \hline
 	Results 				& 		 As Expected\\ \hline
-	Comments				& 		 This test shows that the functionality still works. The methods which are called are from the provided Interface. This shows that requirement \emph{Interface to applications} is met.\\ \hline
+	Comments				& 		 This test shows that the functionality still works. The methods which are called, are from the provided Interface. This shows that requirement \emph{Interface to applications} is met.\\ \hline
     \end{tabular}
     \caption{Storing An UCI}
 \end{table}
@@ -54,7 +54,7 @@
     \hline
     Test 	 				& 		 Resolving an UCI\\ \hline
 	Produce  				& 		 An application connected to the platform sends a ResolveMessage.\\ \hline
-	Expected Results  		& 		 The application should call the method resolveUCI, causing the platform to send a ResolveMessage. When the message has been routed through the network a ResolveResponsMessage should be received by the platform and be passed to the application. \\ \hline
+	Expected Results  		& 		 The application should call the method resolveUCI, causing the platform to send a ResolveMessage. When the message has been routed through the network, a ResolveResponseMessage should be received by the platform and be passed to the application. \\ \hline
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 The methods that are called are the methods from the provided Interface. This shows that requirement \emph{Interface to applications} is met.\\ \hline
     \end{tabular}
@@ -113,7 +113,7 @@
     \begin{tabular}{ | l | p{12cm} |}
     \hline
     Test 	 				& 		 Connect an application to an external MediaSense platform\\ \hline
-	Produce  				& 		 The platform was started on one computer and an application running on another computer connects to the platform by getting its reference from the RMI registry.\\ \hline
+	Produce  				& 		 The platform was started on one computer, and an application running on another computer connects to the platform by getting its reference from the RMI registry.\\ \hline
 	Expected Results  		& 		 Applications can communicate with the platform running on a PC. \\ \hline
 	Results 				& 		 As Expected\\ \hline
 	Comments				& 		 Requirement gateway is met. \\ \hline
